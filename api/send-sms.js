@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
       to: to,
     });
 
-    return res.status(200).json({ message: "SMS Sent!", sid: sms.sid });
+    return res.status(200).json({ message: "SMS Sent!", sms });
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
